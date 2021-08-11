@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="sg.edu.rp.c346.id20023841.oursingapore.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_name_of_island_here"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_description_here"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textViewSQKM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/square_km" />
+
+    <EditText
+        android:id="@+id/etSQKM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_squre_km_here"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textViewStars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stars" />
+
+    <RatingBar
+        android:id="@+id/ratingBarStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_weight="1"
+            android:text="Insert" />
+
+        <Button
+            android:id="@+id/buttonShowList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2.5dp"
+            android:layout_marginLeft="2.5dp"
+            android:layout_weight="1"
+            android:text="Show List" />
+    </LinearLayout>
+</LinearLayout>

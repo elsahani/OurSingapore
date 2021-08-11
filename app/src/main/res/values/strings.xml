@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OurSingapore</string>
+    <string name="name">Name</string>
+    <string name="enter_name_of_island_here">Enter Name of Island here</string>
+    <string name="description">Description</string>
+    <string name="enter_description_here">Enter Description here</string>
+    <string name="square_km">Square Km</string>
+    <string name="enter_squre_km_here">Enter Squre Km here</string>
+    <string name="show_all_island_with_5_stars">Show all island with 5 stars</string>
+</resources>

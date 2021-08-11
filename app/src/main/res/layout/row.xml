@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvIslandName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#5A26E8" />
+
+    <TextView
+        android:id="@+id/tvIslandDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#00D4CD" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSQKM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageViewNew"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="visible"/>
+
+        <RatingBar
+            android:id="@+id/ratingBarStars2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5" />
+
+    </LinearLayout>
+
+</LinearLayout>
