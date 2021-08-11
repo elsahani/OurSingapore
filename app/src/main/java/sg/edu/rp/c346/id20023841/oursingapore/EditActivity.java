@@ -51,7 +51,7 @@ public class EditActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder myBuilder = new AlertDialog.Builder(EditActivity.this);
                 myBuilder.setTitle("Danger");
-                myBuilder.setMessage("Are you sure you want to delete the island" + island.getName());
+                myBuilder.setMessage("Are you sure you want to delete the island \n\n" + island.getName());
                 myBuilder.setCancelable(false);
 
                 //Configure the 'positive' button
@@ -62,8 +62,8 @@ public class EditActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     DBHelper dbh = new DBHelper(EditActivity.this);
-                    int result = dbh.deleteIsland(island.get_id());
-                        finish();
+                    dbh.deleteIsland(island.get_id());
+                    finish();
                     }
                 });
                 AlertDialog myDialog = myBuilder.create();
@@ -77,24 +77,12 @@ public class EditActivity extends AppCompatActivity {
                 DBHelper dbh = new DBHelper(EditActivity.this);
                 island.setName(etIname.getText().toString().trim());
                 island.setDescription(etIdescription.getText().toString().trim());
-                int SQKM = 0;
-                try {
-                    SQKM = Integer.valueOf(etMSQKM.getText().toString().trim());
-                } catch (Exception e){
-                    Toast.makeText(EditActivity.this, "Invalid year", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+                int SQKM = Integer.parseInt(etMSQKM.getText().toString());
                 island.setSqkm(SQKM);
 
                 island.setStars((int) rbStars.getRating());
-                int result = dbh.updateIsland(island);
-                if (result>0){
-                    Toast.makeText(EditActivity.this, "Song updated", Toast.LENGTH_SHORT).show();
-                    finish();
-                } else {
-                    Toast.makeText(EditActivity.this, "Update failed", Toast.LENGTH_SHORT).show();
-                }
-
+                dbh.updateIsland(island);
+                finish();
             }
         });
 
@@ -107,13 +95,18 @@ public class EditActivity extends AppCompatActivity {
                 myBuilder.setCancelable(false);
 
                 //Configure the 'positive' button
-                myBuilder.setPositiveButton("Discard", null);
-
-                //Configure the 'negative' button
-                myBuilder.setNegativeButton("Do Not Discard", new DialogInterface.OnClickListener() {
+                myBuilder.setPositiveButton("Do Not Discard", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
+                    }
+                });
+
+                //Configure the 'negative' button
+                myBuilder.setNegativeButton("Discard", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent i = new Intent(EditActivity.this, ShowActivity.class);
                     }
                 });
 

@@ -53,14 +53,12 @@ public class CustomAdapter extends ArrayAdapter {
 
         int sqkm = currentVersion.getSqkm();
 
-        /*if (year >= 2019){
-            image.setImageResource(R.drawable.newsong);
+        if (sqkm >= 5){
+            image.setImageResource(R.drawable.newfamous);
 
         }else{
             image.setVisibility(View.INVISIBLE);
         }
-         */
-
         return rowView;
     }
 
