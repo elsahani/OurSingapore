@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#5A26E8" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/tvIslandDescription"

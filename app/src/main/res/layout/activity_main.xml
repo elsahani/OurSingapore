@@ -75,7 +75,8 @@
             android:layout_marginEnd="2.5dp"
             android:layout_marginRight="2.5dp"
             android:layout_weight="1"
-            android:text="Insert" />
+            android:text="Insert"
+            app:backgroundTint="#000000" />
 
         <Button
             android:id="@+id/buttonShowList"
@@ -84,6 +85,8 @@
             android:layout_marginStart="2.5dp"
             android:layout_marginLeft="2.5dp"
             android:layout_weight="1"
-            android:text="Show List" />
+            android:text="Show List"
+            app:backgroundTint="#000000"
+            app:iconTint="#000000" />
     </LinearLayout>
 </LinearLayout>
